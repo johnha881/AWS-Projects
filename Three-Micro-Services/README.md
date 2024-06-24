@@ -59,5 +59,10 @@ SCALING
    a. enable auto scaling - adjust reading/write capcity
    b. Good use of partition keys. else they become hot(used by too mamy items)
    c. On-demand mode to avoid unpredictable workloads.
-2.
-         
+2. API Gateway
+   a. Configure throttle settings to limit number of request per second
+   b. enable caching to store responses so lambda calls and dynamodb request aren't constantly being used for repeating requests.
+   c. API keys and usage plans to manange - put quotas and limits for api
+   d. Use regional endpoints for faster access
+3. Lambda
+   a.        
