@@ -55,7 +55,7 @@ serverless with API gateway, lambda and dynamodb
 
 
 SCALING 
-1. DYNAMODB
+1. DynamoDB
    a. enable auto scaling - adjust reading/write capcity
    b. Good use of partition keys. else they become hot(used by too mamy items)
    c. On-demand mode to avoid unpredictable workloads.
@@ -69,3 +69,10 @@ SCALING
    b. Provisioned concurrency - makes sure critical functions have enough invokcations
    c. cold starts - Use minimal dependencies and initialize variables outside the handler function.
    d. Lambda Layers to manage common dependencies and reduce deployment package size.
+
+AVAILIBILITY
+1. DynamoDB
+   a. Global Tables - cross region redundency and disasert recovery.
+   b. Back-ups - Configure DynamoDB backups and point-in-time recovery to protect your data from accidental deletions or corruption.
+2. API Gateway
+   a.
