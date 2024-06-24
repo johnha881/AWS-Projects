@@ -40,5 +40,11 @@ serverless with API gateway, lambda and dynamodb
 
 3. Create dynamoDB table
    a. primary Key is very important as it is a unique identifier that distinguishes rows from each other
+
+4. Create APIGateway
+   a. use REST - POST for multiple actions
+      - create resource and then create a method that it will use to do some action
+      - POST method will ask for what you want to interact with. In this case lambda and we can select the the lambda function we already created
+   b. Deploy API
    
          
