@@ -8,7 +8,7 @@ serverless with API gateway, lambda and dynamodb
     "Version": "2012-10-17",
     "Statement": [
     {
-      "Sid": "Stmt1428341300017",
+      "Sid": "statementidlambdatodynamodb",
       "Action": [
         "dynamodb:DeleteItem",
         "dynamodb:GetItem",
@@ -19,18 +19,6 @@ serverless with API gateway, lambda and dynamodb
       ],
       "Effect": "Allow",
       "Resource": "*"
-    },
-    {
-      "Sid": "",
-      "Resource": "*",
-      "Action": [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-      ],
-      "Effect": "Allow"
-    }
-    ]
     }
     ```
 
