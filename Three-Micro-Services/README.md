@@ -35,4 +35,8 @@ serverless with API gateway, lambda and dynamodb
       -testing the lambda function -
                   if operation in operations:
                        return operations[operation](event.get('payload'))
+         This return statement will output whatever data we put in while not being linked to a dynamoDB table
+
+
+3. Create dynamoDB table
          
