@@ -39,4 +39,6 @@ serverless with API gateway, lambda and dynamodb
 
 
 3. Create dynamoDB table
+   a. primary Key is very important as it is a unique identifier that distinguishes rows from each other
+   
          
