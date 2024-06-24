@@ -46,5 +46,18 @@ serverless with API gateway, lambda and dynamodb
       - create resource and then create a method that it will use to do some action
       - POST method will ask for what you want to interact with. In this case lambda and we can select the the lambda function we already created
    b. Deploy API
-   
+      - will need to indicate which STAGE
+      - DEV,Test,Prod
+      - select the URL endpoint
+   c. Use curl or postman to inject actions into API Gateway
+
+5. Check if our inject works and use post commands to retreieve list/items inside the table
+
+
+SCALING 
+1. DYNAMODB
+   a. enable auto scaling - adjust reading/write capcity
+   b. Good use of partition keys. else they become hot(used by too mamy items)
+   c. On-demand mode to avoid unpredictable workloads.
+2.
          
