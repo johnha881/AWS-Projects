@@ -65,4 +65,7 @@ SCALING
    c. API keys and usage plans to manange - put quotas and limits for api
    d. Use regional endpoints for faster access
 3. Lambda
-   a.        
+   a. Increease Reserved concurrency limit to handle simultaneous invocations
+   b. Provisioned concurrency - makes sure critical functions have enough invokcations
+   c. cold starts - Use minimal dependencies and initialize variables outside the handler function.
+   d. Lambda Layers to manage common dependencies and reduce deployment package size.
