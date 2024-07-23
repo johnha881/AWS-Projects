@@ -85,5 +85,15 @@ AVAILIBILITY
    d.Use multiple NAT gateways for outbound internet access, distributed across different AZs.
 
 COST OPTIMIZATION
+1.DynamoDB
+   a.Provision capacity for predicable workoads. More cost effecive than On-demand.
+   b.Auto-Scaling to avoid over Provision of capacity.
+   c.Avoid using scans where possible; prefer queries or using secondary indexes.
+   d.Use DAX for caching data to lower retrieval time.
+   e.Use CloudWatch to monitor metrics.
+2. API Gateway
+   a. API request efficency by reducing number of API request per second with throttling and quotas
+   b. Field filtering to lower amount being retrieved 
+   c.
 
 
