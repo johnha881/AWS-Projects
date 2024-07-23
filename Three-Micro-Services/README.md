@@ -34,7 +34,7 @@ serverless with API gateway, lambda and dynamodb
          if this table name matches what is provided by APIgateway then actions provided by the api are triggered in the lambda function and pushed to dynamoDB
       -testing the lambda function -
                   if operation in operations:
-                       return operations [operation](event.get('payload'))
+                       return operations "[operation](event.get('payload'))"
          This return statement will output whatever data we put in while not being linked to a dynamoDB table
 
 
