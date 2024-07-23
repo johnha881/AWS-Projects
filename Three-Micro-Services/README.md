@@ -94,6 +94,8 @@ COST OPTIMIZATION
 2. API Gateway
    a. API request efficency by reducing number of API request per second with throttling and quotas
    b. Field filtering to lower amount being retrieved 
-   c.
+   c. Endpoints should be in proper region
+3. Lambda
+   a.
 
 
