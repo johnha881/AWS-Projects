@@ -85,7 +85,7 @@ AVAILIBILITY
    d.Use multiple NAT gateways for outbound internet access, distributed across different AZs.
 
 COST OPTIMIZATION
-1.DynamoDB
+1. DynamoDB
    a.Provision capacity for predicable workoads. More cost effecive than On-demand.
    b.Auto-Scaling to avoid over Provision of capacity.
    c.Avoid using scans where possible; prefer queries or using secondary indexes.
