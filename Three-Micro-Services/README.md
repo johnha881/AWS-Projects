@@ -100,6 +100,16 @@ COST OPTIMIZATION
    b. Execution time limit 
    c. Reserved concurrency incase of unexepected usage
 
+SECURITY 
+1. DynamoDB
+   a. IAM access for authorized users/groups/roles
+   b. Encryption at rest with KMS
+   c. Cloudtrail and CloudWatch for monitoring
+   d. VPC endpoint access
+   e. Continuous backup incase of accidental deletion
+2. API Gateway
+   a.
+   
    
 
 
