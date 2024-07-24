@@ -21,15 +21,15 @@ serverless with API gateway, lambda and dynamodb
       "Resource": "*"
     }
     ```
-   -statement ID provides an OPTIONAL identifier. Good for providing specific way to find out what an individial policy does inside a role.
-   -Action gives an array of things you can do. Here are all things you can do to the dynamoDB table.
-   -effect - Deny has precedence over allow, good way to stop deletes
-   - resource is currently use * - good way to resstrict access is to have the actual ARN in here
+   - Statement ID provides an OPTIONAL identifier. Good for providing specific way to find out what an individial policy does inside a role.
+   - Action gives an array of things you can do. Here are all things you can do to the dynamoDB table.
+   - Effect - Deny has precedence over allow, good way to stop deletes
+   - Resource is currently use * - good way to resstrict access is to have the actual ARN in here
 
 2. Create a lambda function that will handle all the logic into performation actions into dynamoDb table
-   a. Import Boto3- this lets your python3 code interact with AWS services.
-   b. Import Json -
-   -if 'tableName' in event:
+   A. Import Boto3- this lets your python3 code interact with AWS services.
+   B. Import Json -
+   - if 'tableName' in event:
         dynamo = boto3.resource('dynamodb').Table(event['tableName'])
          if this table name matches what is provided by APIgateway then actions provided by the api are triggered in the lambda function and pushed to dynamoDB
       -testing the lambda function -
