@@ -38,7 +38,7 @@ Create roles for Lambda that provide access to DynamoDB with the proper permissi
       "Effect": "Allow",
       "Resource": "*"
     }
-    ```
+   ```
 
 - **Statement ID**: An optional identifier for individual policies within a role, useful for distinguishing policies.
 - **Action**: A list of actions permitted on the DynamoDB table.
