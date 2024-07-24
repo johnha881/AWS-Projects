@@ -113,6 +113,12 @@ SECURITY
    c. Usage plan for API keys
    d. Rotate API keys
    e. WAF and CloudFront to prevent against attacks
+3. Lambda
+   a. IAM role for lambda to access DynamoDB
+   b. Environmental variables instead of hardcoding into code
+   c. VPC with inbound and outbound rules
+   d. Cloudwatch for auditing
+   e. X-ray
    
    
    
