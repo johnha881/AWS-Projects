@@ -1,8 +1,26 @@
-serverless with API gateway, lambda and dynamodb
+# Serverless Application with API Gateway, Lambda, and DynamoDB
 
-1. create roles for lambda that provides access to dynamodb with the proper roles to interact with dynamoDB
-   a. permissions are set up as follows:
+## Table of Contents
+- [Introduction](#introduction)
+- [Setup](#setup)
+  - [Create IAM Roles](#create-iam-roles)
+  - [Create Lambda Function](#create-lambda-function)
+  - [Create DynamoDB Table](#create-dynamodb-table)
+  - [Create API Gateway](#create-api-gateway)
+- [Usage](#usage)
+- [Scaling](#scaling)
+- [Availability](#availability)
+- [Cost Optimization](#cost-optimization)
+- [Security](#security)
+- [License](#license)
 
+## Introduction
+This project demonstrates how to build a serverless application using AWS API Gateway, AWS Lambda, and Amazon DynamoDB. It covers the steps to set up IAM roles, Lambda functions, DynamoDB tables, and API Gateway, along with considerations for scaling, availability, cost optimization, and security.
+
+## Setup
+
+### Create IAM Roles
+Create roles for Lambda that provide access to DynamoDB with the proper permissions. 
    ```json
     {
     "Version": "2012-10-17",
@@ -20,107 +38,104 @@ serverless with API gateway, lambda and dynamodb
       "Effect": "Allow",
       "Resource": "*"
     }
-    ```
-   - Statement ID provides an OPTIONAL identifier. Good for providing specific way to find out what an individial policy does inside a role.
-   - Action gives an array of things you can do. Here are all things you can do to the dynamoDB table.
-   - Effect - Deny has precedence over allow, good way to stop deletes
-   - Resource is currently use * - good way to resstrict access is to have the actual ARN in here
+   ```
 
-2. Create a lambda function that will handle all the logic into performation actions into dynamoDb table
-   A. Import Boto3- this lets your python3 code interact with AWS services.
-   B. Import Json -
-   - if 'tableName' in event:
-        dynamo = boto3.resource('dynamodb').Table(event['tableName'])
-         if this table name matches what is provided by APIgateway then actions provided by the api are triggered in the lambda function and pushed to dynamoDB
-      -testing the lambda function -
-                  if operation in operations:
-                       return operations `[operation](event.get('payload'))`
-         This return statement will output whatever data we put in while not being linked to a dynamoDB table
+- **Statement ID**: An optional identifier for individual policies within a role, useful for distinguishing policies.
+- **Action**: A list of actions permitted on the DynamoDB table.
+- **Effect**: Use "Allow" to permit actions (note: "Deny" takes precedence over "Allow").
+- **Resource**: Currently set to `*`, but for better security, specify the actual ARN.
 
+### Create Lambda Function
+Create a Lambda function to manage and execute the logic required for interacting with the DynamoDB table.
+- **Import Boto3**: This allows Python code to interact with AWS services.
+- **Import JSON**: Necessary for handling JSON data.
+- **Logic**: Check if the `tableName` is provided in the event and perform the corresponding actions on the DynamoDB table based on the operations specified in the event.
 
-3. Create dynamoDB table
-   a. Primary Key is very important as it is a unique identifier that distinguishes rows from each other
+### Create DynamoDB Table
+- **Primary Key**: Define a primary key as a unique identifier to distinguish rows from each other.
 
-4. Create APIGateway
-   a. use REST - POST for multiple actions
-      - create resource and then create a method that it will use to do some action
-      - POST method will ask for what you want to interact with. In this case lambda and we can select the the lambda function we already created
-   b. Deploy API
-      - will need to indicate which STAGE
-      - DEV,Test,Prod
-      - select the URL endpoint
-   c. Use curl or postman to inject actions into API Gateway
+### Create API Gateway
+- **Use REST API**: Configure a POST method for multiple actions.
+- **Create Resource and Method**: Create a resource and configure a POST method to interact with the Lambda function created earlier.
+- **Deploy API**: Deploy the API, specifying the stage (DEV, Test, Prod), and use the URL endpoint for testing with tools like curl or Postman.
 
-5. Check if our inject works and use post commands to retreieve list/items inside the table
+## Usage
+Check if the API injection works by using POST commands to interact with the DynamoDB table and retrieve items.
 
+## Scaling
 
-SCALING 
-1. DynamoDB
-   a. enable auto scaling - adjust reading/write capcity
-   b. Good use of partition keys. else they become hot(used by too mamy items)
-   c. On-demand mode to avoid unpredictable workloads.
-2. API Gateway
-   a. Configure throttle settings to limit number of request per second
-   b. enable caching to store responses so lambda calls and dynamodb request aren't constantly being used for repeating requests.
-   c. API keys and usage plans to manange - put quotas and limits for api
-   d. Use regional endpoints for faster access
-3. Lambda
-   a. Increease Reserved concurrency limit to handle simultaneous invocations
-   b. Provisioned concurrency - makes sure critical functions have enough invokcations
-   c. cold starts - Use minimal dependencies and initialize variables outside the handler function.
-   d. Lambda Layers to manage common dependencies and reduce deployment package size.
+### DynamoDB
+- **Enable Auto Scaling**: Adjust read/write capacity automatically.
+- **Partition Keys**: Use effectively to avoid hot partitions.
+- **On-Demand Mode**: Suitable for unpredictable workloads.
 
-AVAILIBILITY
-1. DynamoDB
-   a. Global Tables - cross region redundency and disasert recovery.
-   b. Back-ups - Configure DynamoDB backups and point-in-time recovery to protect your data from accidental deletions or corruption.
-2. API Gateway
-   a. Edge optimzed endpoints - CND(cloudFront)
-   b. Multi-region deployment - via DNS traffic distribuation depending on requestion location
-   c. Global Accelerator -redirect traffic to healthy regions
-3. Lambda
-   a. Multi-region - use health checks and latecy to route correctly
-   b. automate depolyment to make all distributated locations consistent
-   c.VPC Configuration- If your Lambda functions need to access resources within a VPC, ensure you have multiple subnets in different Availability Zones (AZs) to provide redundancy.
-   d.Use multiple NAT gateways for outbound internet access, distributed across different AZs.
+### API Gateway
+- **Throttle Settings**: Limit the number of requests per second.
+- **Enable Caching**: Store responses to reduce repetitive requests.
+- **API Keys and Usage Plans**: Manage quotas and limits for API usage.
+- **Regional Endpoints**: Provide faster access.
 
-COST OPTIMIZATION
-1. DynamoDB
-   a.Provision capacity for predicable workoads. More cost effecive than On-demand.
-   b.Auto-Scaling to avoid over Provision of capacity.
-   c.Avoid using scans where possible; prefer queries or using secondary indexes.
-   d.Use DAX for caching data to lower retrieval time.
-   e.Use CloudWatch to monitor metrics.
-2. API Gateway
-   a. API request efficency by reducing number of API request per second with throttling and quotas
-   b. Field filtering to lower amount being retrieved 
-   c. Endpoints should be in proper region
-3. Lambda
-   a. Optimal mememory(which also adjust cpu/IOPS)
-   b. Execution time limit 
-   c. Reserved concurrency incase of unexepected usage
+### Lambda
+- **Increase Reserved Concurrency**: Handle simultaneous invocations.
+- **Provisioned Concurrency**: Ensure critical functions have enough invocations.
+- **Minimize Cold Starts**: Use minimal dependencies and initialize variables outside the handler function.
+- **Lambda Layers**: Manage common dependencies and reduce deployment package size.
 
-SECURITY 
-1. DynamoDB
-   a. IAM access for authorized users/groups/roles
-   b. Encryption at rest with KMS
-   c. Cloudtrail and CloudWatch for monitoring
-   d. VPC endpoint access
-   e. Continuous backup incase of accidental deletion
-2. API Gateway
-   a. IAM access for authorized users/groups/roles
-   b. Cloudtrail API logs
-   c. Usage plan for API keys
-   d. Rotate API keys
-   e. WAF and CloudFront to prevent against attacks
-3. Lambda
-   a. IAM role for lambda to access DynamoDB
-   b. Environmental variables instead of hardcoding into code
-   c. VPC with inbound and outbound rules
-   d. Cloudwatch for auditing
-   e. X-ray
-   
-   
-   
+## Availability
 
+### DynamoDB
+- **Global Tables**: Cross-region redundancy and disaster recovery.
+- **Backups**: Configure backups and point-in-time recovery.
 
+### API Gateway
+- **Edge-Optimized Endpoints**: Use CloudFront CDN for global distribution.
+- **Multi-Region Deployment**: Distribute traffic based on request location using DNS.
+- **Global Accelerator**: Redirect traffic to healthy regions.
+
+### Lambda
+- **Multi-Region Deployment**: Use health checks and latency-based routing.
+- **Automate Deployment**: Ensure consistency across distributed locations.
+- **VPC Configuration**: Ensure multiple subnets in different Availability Zones (AZs) for redundancy.
+- **Multiple NAT Gateways**: For outbound internet access across different AZs.
+
+## Cost Optimization
+
+### DynamoDB
+- **Provision Capacity**: For predictable workloads, it's more cost-effective than on-demand.
+- **Auto-Scaling**: Avoid over-provisioning of capacity.
+- **Efficient Queries**: Prefer queries over scans and use secondary indexes.
+- **DAX**: Use for caching data to lower retrieval time.
+- **Monitoring**: Use CloudWatch for monitoring metrics.
+
+### API Gateway
+- **Efficient API Requests**: Reduce the number of API requests per second with throttling and quotas.
+- **Field Filtering**: Retrieve only necessary data to reduce data transfer.
+- **Optimal Endpoints**: Ensure endpoints are in the proper region.
+
+### Lambda
+- **Optimal Memory**: Adjust memory settings to balance cost and performance.
+- **Execution Time Limit**: Optimize function code to reduce execution time.
+- **Reserved Concurrency**: Manage unexpected usage spikes.
+
+## Security
+
+### DynamoDB
+- **IAM Access**: Restrict access to authorized users/groups/roles.
+- **Encryption**: Use AWS KMS for encryption at rest.
+- **Monitoring**: Use CloudTrail and CloudWatch for auditing.
+- **VPC Endpoints**: Securely access DynamoDB within a VPC.
+- **Continuous Backups**: Protect against accidental deletions or corruption.
+
+### API Gateway
+- **IAM Access**: Secure access to authorized users/groups/roles.
+- **API Logs**: Use CloudTrail for monitoring API calls.
+- **Usage Plans**: Manage API keys with quotas and limits.
+- **Rotate API Keys**: Regularly update API keys.
+- **WAF and CloudFront**: Protect against web attacks.
+
+### Lambda
+- **IAM Role**: Secure access for Lambda to interact with DynamoDB.
+- **Environment Variables**: Avoid hardcoding sensitive information.
+- **VPC Security**: Use inbound and outbound rules for Lambda within a VPC.
+- **Auditing**: Use CloudWatch for monitoring and logging.
+- **AWS X-Ray**: Trace and analyze application performance.
