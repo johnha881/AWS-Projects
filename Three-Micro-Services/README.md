@@ -96,6 +96,10 @@ COST OPTIMIZATION
    b. Field filtering to lower amount being retrieved 
    c. Endpoints should be in proper region
 3. Lambda
-   a.
+   a. Optimal mememory(which also adjust cpu/IOPS)
+   b. Execution time limit 
+   c. Reserved concurrency incase of unexepected usage
+
+   
 
 
