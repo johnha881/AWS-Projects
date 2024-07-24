@@ -108,7 +108,12 @@ SECURITY
    d. VPC endpoint access
    e. Continuous backup incase of accidental deletion
 2. API Gateway
-   a.
+   a. IAM access for authorized users/groups/roles
+   b. Cloudtrail API logs
+   c. Usage plan for API keys
+   d. Rotate API keys
+   e. WAF and CloudFront to prevent against attacks
+   
    
    
 
