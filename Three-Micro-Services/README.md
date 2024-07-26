@@ -12,7 +12,7 @@
 - [Availability](#availability)
 - [Cost Optimization](#cost-optimization)
 - [Security](#security)
-- [License](#license)
+- [Issues I ran into](#Issues)
 
 ## Introduction
 This project demonstrates how to build a serverless application using AWS API Gateway, AWS Lambda, and Amazon DynamoDB. It covers the steps to set up IAM roles, Lambda functions, DynamoDB tables, and API Gateway, along with considerations for scaling, availability, cost optimization, and security.
@@ -139,3 +139,6 @@ Check if the API injection works by using POST commands to interact with the Dyn
 - **VPC Security**: Use inbound and outbound rules for Lambda within a VPC.
 - **Auditing**: Use CloudWatch for monitoring and logging.
 - **AWS X-Ray**: Trace and analyze application performance.
+
+## Issues
+- **
