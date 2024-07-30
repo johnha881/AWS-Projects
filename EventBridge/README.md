@@ -2,7 +2,7 @@ Event driven architecture with the use of EventBridge service.
 
 Services used:
 EventBridge
-API Gateway
+SQS
 Step Functions
 SNS
 
