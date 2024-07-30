@@ -13,4 +13,10 @@ Advantage of this type of architecture:
 
 Setup
 
+Create EventBridge
+1. Navigate to EventBridge in your console
+2. Select Event Buses under Buses
+3. Create event bus
+
+![eventbuscreation](https://github.com/user-attachments/assets/07c9ff5e-4221-425a-9640-da58000e96ba)
 
