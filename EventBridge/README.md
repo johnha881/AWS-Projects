@@ -34,3 +34,5 @@ Rules:
    - Rule type: Rule with an event pattern 
 ![4](https://github.com/user-attachments/assets/9fe4eb65-fb8f-4222-aa13-94477ded2cd1)
 
+
+
