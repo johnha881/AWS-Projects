@@ -22,5 +22,6 @@ Create EventBridge
 
 1.In "create event bus" page create a name of your choice (my-event-bus will be mine)
 ![2nd event buss](https://github.com/user-attachments/assets/8a3b71af-e23f-4670-aae0-c78a298790f4)
+
 2. Leave the rest as default. 
 3. Select Create at bottom of page.
