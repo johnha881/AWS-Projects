@@ -25,3 +25,12 @@ Create EventBridge
 
 2. Leave the rest as default. 
 3. Select Create at bottom of page.
+
+Rules:
+1. Back at the EventBridge page, select rules and create rule.
+2. At the Define rule detail page:
+   - Name the rule ( Mine will be rule-for-testing)
+   - Description: Testing by catching all events
+   - Rule type: Rule with an event pattern 
+![4](https://github.com/user-attachments/assets/9fe4eb65-fb8f-4222-aa13-94477ded2cd1)
+
