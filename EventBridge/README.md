@@ -53,10 +53,10 @@ Rules:
 ![6](https://github.com/user-attachments/assets/e4b3442f-708a-4304-8657-6904fce63198)
 
    Under Select targets page:
-      -Select AWS Service as Target type.
-      -Select CloudWatch Log Group under Select a target.
-      -Enter "my-event-bus" as Log Group(/aws/events/my-event-bus).
-      -Click Next until you are able to review and create rule.
+   -Select AWS Service as Target type.
+   -Select CloudWatch Log Group under Select a target.
+   -Enter "my-event-bus" as Log Group(/aws/events/my-event-bus).
+   -Click Next until you are able to review and create rule.
 
 ![15](https://github.com/user-attachments/assets/54b43805-5205-4bca-b70e-d7fd23f6e5af)
 
