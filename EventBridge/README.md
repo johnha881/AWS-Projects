@@ -62,15 +62,15 @@ Advantage of this type of architecture:
 
 **Testing Event**
 
-   1. Select Event Buses again and Click on Send events
+1. Select Event Buses again and Click on Send events
 
-   ![16](https://github.com/user-attachments/assets/b1a5ad80-7da0-42cd-a6fd-8b94217e70d5)
+![16](https://github.com/user-attachments/assets/b1a5ad80-7da0-42cd-a6fd-8b94217e70d5)
 
-   2. Select/Fill in the these values:
-      -my-event-bus for Event Bus
-      -com.aws.my-event-bus for Event source
-      -Notification for detail type
-      -{
+2. Select/Fill in the these values:
+   -my-event-bus for Event Bus
+   -com.aws.my-event-bus for Event source
+   -Notification for detail type
+   -{
         "category": "Colors",
         "value": 101,
         "location": "us-east"
