@@ -77,6 +77,18 @@ Advantage of this type of architecture:
        }
       for Event detail
 
+3. Click Send
+
+4. Head over to CloudWatch page and find Logs on left pane
+5. Select Log Groups and click on /aws/events/my-event-bus
+
+![18](https://github.com/user-attachments/assets/f9dfa4ff-fd2f-4d31-bab5-576d5a6131e4)
+
+6. Under Log streams click on the recently created stream
+
+![19](https://github.com/user-attachments/assets/b3037f4a-99db-429f-88f4-53ce78aff9dc)
+
+
 
 
 
