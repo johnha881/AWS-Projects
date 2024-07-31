@@ -11,9 +11,9 @@ Advantage of this type of architecture:
 2. Filtering and Routing to the correct target depending not the rules stated.
 
 
-Setup
+**Setup**
 
-Create EventBridge
+**Create EventBridge**
 1. Navigate to EventBridge in your console.
 2. Select Event Buses under Buses.
 3. Create event bus.
@@ -27,7 +27,7 @@ Create EventBridge
 2. Leave the rest as default. 
 3. Select Create at bottom of page.
 
-Rules:
+**Rules:**
 1. Back at the EventBridge page, select rules and create rule.
 2. Select "my-event-bridge" as the bus name the rule will apply to.
 
@@ -53,13 +53,20 @@ Rules:
 ![6](https://github.com/user-attachments/assets/e4b3442f-708a-4304-8657-6904fce63198)
 
    C. Under Select targets page:
-      *Select AWS Service as Target type.
-      *Select CloudWatch Log Group under Select a target.
-      *Enter "my-event-bus" as Log Group(/aws/events/my-event-bus).
-      *Click Next until you are able to review and create rule.
+      -Select AWS Service as Target type.
+      -Select CloudWatch Log Group under Select a target.
+      -Enter "my-event-bus" as Log Group(/aws/events/my-event-bus).
+      -Click Next until you are able to review and create rule.
 
 ![15](https://github.com/user-attachments/assets/54b43805-5205-4bca-b70e-d7fd23f6e5af)
 
+**Testing Event**
+
+   1. Select Event Buses again and Click on Send events
+
+   ![16](https://github.com/user-attachments/assets/b1a5ad80-7da0-42cd-a6fd-8b94217e70d5)
+
+      -ddfsdf
 
 
 
