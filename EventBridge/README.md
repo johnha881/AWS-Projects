@@ -21,6 +21,7 @@ Create EventBridge
 ![eventbuscreation](https://github.com/user-attachments/assets/07c9ff5e-4221-425a-9640-da58000e96ba)
 
 1.In "create event bus" page create a name of your choice (my-event-bus will be mine)
+
 ![2nd event buss](https://github.com/user-attachments/assets/8a3b71af-e23f-4670-aae0-c78a298790f4)
 
 2. Leave the rest as default. 
@@ -36,6 +37,7 @@ Rules:
    - Name the rule ( Mine will be rule-for-testing).
    - Description: Testing by catching all events.
    - Rule type: Rule with an event pattern .
+
 ![4](https://github.com/user-attachments/assets/9fe4eb65-fb8f-4222-aa13-94477ded2cd1)
 
 4. On the Build event pattern page:
