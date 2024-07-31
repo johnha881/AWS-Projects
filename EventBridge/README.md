@@ -32,11 +32,18 @@ Rules:
 
 ![13](https://github.com/user-attachments/assets/6f31e41b-74b7-40f8-9202-7d94e00ae509)
 
-4. At the Define rule detail page:
+3. At the Define rule detail page:
    - Name the rule ( Mine will be rule-for-testing)
    - Description: Testing by catching all events
    - Rule type: Rule with an event pattern 
 ![4](https://github.com/user-attachments/assets/9fe4eb65-fb8f-4222-aa13-94477ded2cd1)
+
+4. On the Build event pattern page:
+   -Select "Other" as Event source
+
+![5](https://github.com/user-attachments/assets/687b4440-34a0-4cee-8b9f-41489308c30d)
+
+
 
 
 
