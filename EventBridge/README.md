@@ -41,22 +41,22 @@ Rules:
 ![4](https://github.com/user-attachments/assets/9fe4eb65-fb8f-4222-aa13-94477ded2cd1)
 
 4. On the Build event pattern page:
-   Select "Other" as Event source.
+   A. Select "Other" as Event source.
 
 ![14](https://github.com/user-attachments/assets/181cee96-454b-4fba-889d-615feaa6201e)
 
-   Under Even pattern enter.  
+   B. Under Even pattern enter.  
    {
      "source": ["com.aws.my-event-bus"]
    }
 
 ![6](https://github.com/user-attachments/assets/e4b3442f-708a-4304-8657-6904fce63198)
 
-   Under Select targets page:
-   -Select AWS Service as Target type.
-   -Select CloudWatch Log Group under Select a target.
-   -Enter "my-event-bus" as Log Group(/aws/events/my-event-bus).
-   -Click Next until you are able to review and create rule.
+   C. Under Select targets page:
+      -Select AWS Service as Target type.
+      -Select CloudWatch Log Group under Select a target.
+      -Enter "my-event-bus" as Log Group(/aws/events/my-event-bus).
+      -Click Next until you are able to review and create rule.
 
 ![15](https://github.com/user-attachments/assets/54b43805-5205-4bca-b70e-d7fd23f6e5af)
 
