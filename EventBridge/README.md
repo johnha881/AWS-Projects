@@ -43,14 +43,14 @@ Advantage of this type of architecture:
 4. On the Build event pattern page:
    A. Select "Other" as Event source.
 
-![14](https://github.com/user-attachments/assets/181cee96-454b-4fba-889d-615feaa6201e)
+   ![14](https://github.com/user-attachments/assets/181cee96-454b-4fba-889d-615feaa6201e)
 
    B. Under Even pattern enter.  
-   {
-     "source": ["com.aws.my-event-bus"]
-   }
+      {
+        "source": ["com.aws.my-event-bus"]
+      }
 
-![6](https://github.com/user-attachments/assets/e4b3442f-708a-4304-8657-6904fce63198)
+   ![6](https://github.com/user-attachments/assets/e4b3442f-708a-4304-8657-6904fce63198)
 
    C. Under Select targets page:
       - Select AWS Service as Target type.
