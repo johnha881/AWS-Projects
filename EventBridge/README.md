@@ -77,6 +77,8 @@ Advantage of this type of architecture:
        }
       for Event detail
 
+![17](https://github.com/user-attachments/assets/eebeaa74-8d9d-4ce4-a38e-7f9019cdf71b)
+
 3. Click Send
 
 4. Head over to CloudWatch page and find Logs on left pane
