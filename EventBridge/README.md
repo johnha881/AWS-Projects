@@ -95,7 +95,9 @@ Advantage of this type of architecture:
  ![20](https://github.com/user-attachments/assets/e12c325c-976a-4d46-a949-0d0e59f116ba)
 
 
+**Rules Matching**
 
+Rules determine which services an event will trigger. They are processed in parallel, without a specific order. JSON format will be used by EventBridge for rules to match event patterns. Patterns need to be precise(Uppercase/Lowercase/decimal/etc matter).
 
 
 
