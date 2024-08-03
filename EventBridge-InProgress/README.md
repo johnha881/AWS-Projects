@@ -106,6 +106,9 @@ We will be using Simple Notification Service (SNS) to receive events from EventB
 1. Navigate to SNS services on the console
 2. On the left pane of the page select topic
 3. Click on create topic button
+
+
+   
 4. Choose Standard as Type
 5. Name will be colors for this topic
 6. Display name will be Colors SNS
