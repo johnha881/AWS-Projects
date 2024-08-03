@@ -178,7 +178,8 @@ Select/Fill in the these values:
 
 Sample of email recieved after sending test:
 
-```{
+```
+{
   "version": "0",
   "id": "XXXXXXXXXXXXXXXXXX",
   "detail-type": "notification",
