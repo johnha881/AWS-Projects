@@ -46,10 +46,11 @@ Advantage of this type of architecture:
    ![14](https://github.com/user-attachments/assets/181cee96-454b-4fba-889d-615feaa6201e)
 
    B. Under Event pattern, enter: 
+      ```
       {
         "source": ["com.aws.my-event-bus"]
       }
-
+      ```
    ![6](https://github.com/user-attachments/assets/e4b3442f-708a-4304-8657-6904fce63198)
 
    C. Under Select targets page:
@@ -70,13 +71,14 @@ Advantage of this type of architecture:
    - my-event-bus for Event Bus
    - com.aws.my-event-bus for Event source
    - Notification for detail type
-   - {
+      ```
+     {
         "category": "Colors",
         "color": "red",
         "location": "us-east"
        }
       for Event detail
-
+      ```
 ![21](https://github.com/user-attachments/assets/2a4c2959-f7ca-420c-956b-1997a3928524)
 
 
