@@ -72,12 +72,13 @@ Advantage of this type of architecture:
    - Notification for detail type
    - {
         "category": "Colors",
-        "value": 101,
+        "color": "red",
         "location": "us-east"
        }
       for Event detail
 
-![17](https://github.com/user-attachments/assets/eebeaa74-8d9d-4ce4-a38e-7f9019cdf71b)
+![21](https://github.com/user-attachments/assets/2a4c2959-f7ca-420c-956b-1997a3928524)
+
 
 3. Click Send
 
@@ -92,8 +93,7 @@ Advantage of this type of architecture:
 
 7. Here you will see the event details that were sent to CloudWatch Logs
 
- ![20](https://github.com/user-attachments/assets/e12c325c-976a-4d46-a949-0d0e59f116ba)
-
+![1](https://github.com/user-attachments/assets/bd7e1454-506d-4cb1-b49b-e47e1c5de251)
 
 **Rules Matching**
 
