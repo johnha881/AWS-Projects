@@ -71,6 +71,7 @@ Advantage of this type of architecture:
    - my-event-bus for Event Bus
    - com.aws.my-event-bus for Event source
    - Notification for detail type
+   - For Event detail:
       ```
      {
         "category": "Colors",
@@ -78,7 +79,7 @@ Advantage of this type of architecture:
         "location": "us-east"
        }
       ```
-   - for Event detail:
+  
       
 ![21](https://github.com/user-attachments/assets/2a4c2959-f7ca-420c-956b-1997a3928524)
 
