@@ -124,7 +124,9 @@ image
 
 
 5. Create subscription
+6. Go to email and subscribe to this topic
 
+image
 
 **Add rule to route and event to SNS**
 
@@ -174,4 +176,21 @@ Select/Fill in the these values:
        }
       for Event detail
 
+Sample of email recieved after sending test:
+
+{
+  "version": "0",
+  "id": "XXXXXXXXXXXXXXXXXX",
+  "detail-type": "notification",
+  "source": "com.aws.my-event-bus",
+  "account": "XXXXXXXXXXXX",
+  "time": "2024-08-03T02:12:25Z",
+  "region": "us-east-1",
+  "resources": [],
+  "detail": {
+    "category": "Colors",
+    "color": "red",
+    "location": "us-east"
+  }
+}
 
