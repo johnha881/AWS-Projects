@@ -99,6 +99,15 @@ Advantage of this type of architecture:
 
 Rules determine which services an event will trigger. They are processed in parallel, without a specific order. JSON format will be used by EventBridge for rules to match event patterns. Patterns need to be precise(Uppercase/Lowercase/decimal/etc matter).
 
+**SNS Creation**
 
+We will be using Simple Notifcation Service (SNS) to recieve events from EventBridge. 
+
+1. Navigate to SNS services on the console
+2. On the left pane of the page select topic
+3. Click on create topic button
+4. Choose Standard as Type
+5. Name will be colors for this topic
+6. Display name will be Colors SNS
 
 
