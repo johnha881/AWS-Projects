@@ -110,6 +110,22 @@ We will be using Simple Notifcation Service (SNS) to recieve events from EventBr
 5. Name will be colors for this topic
 6. Display name will be Colors SNS
 
+Once created we will now need to provide subscription for this Topic.
+1. Go back to topic and select color under topics
+2. Click Create subscription
+
+image
+
+3. I will select Email as my subscriber.
+4. Endpoint will be my email( I will need to go to my email and confirm the subscription)
+
+image
+
+
+
+5. Create subscription
+
+
 **Add rule to route and event to SNS**
 
 Head Back to EvenBridge page and click on rule -> create rule
