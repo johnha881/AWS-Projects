@@ -137,9 +137,25 @@ Select "Custom pattern (JSON Editor) and enter
 Click next
 
 
+Select targets page select "AWS service".
+For Select a target chooose " SNS topic
+Select colors from Topic drop down menu
+Click next until you are able to click on create rule
 
+**Test SNS**
 
+Go back to Eventbridge to test the new rule
+repeat these steps again.
 
-
+Select/Fill in the these values:
+   - my-event-bus for Event Bus
+   - com.aws.my-event-bus for Event source
+   - Notification for detail type
+   - {
+        "category": "Colors",
+        "color": "red",
+        "location": "us-east"
+       }
+      for Event detail
 
 
