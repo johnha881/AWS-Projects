@@ -163,31 +163,33 @@ image
 }
 ```
 
-Click next
+5. Click "Next."
 
+6. On the "Select targets" page:
+- Select "AWS Service" for the "Target type."
+- For "Select a target," choose "SNS topic."
+- Select "colors" from the "Topic" drop-down menu.
 
-Select targets page select "AWS service".
-For Select a target chooose " SNS topic
-Select colors from Topic drop down menu
-Click next until you are able to click on create rule
+7. Click "Next" until you reach the "Review and create rule" section.
+8. Click "Create rule."
 
 **Test SNS**
 
-Go back to Eventbridge to test the new rule
-Repeat these steps:
-
-Select/Fill in the these values:
-   - my-event-bus for Event Bus
-   - com.aws.my-event-bus for Event source
-   - Notification for detail type
-   - {
+1. Go back to EventBridge to test the new rule.
+2. Repeat these steps:
+   - Event Bus: "my-event-bus"
+   - Event source: "com.aws.my-event-bus"
+   - Detail type: "Notification"
+   - Event detail:
+   ```
+     {
         "category": "Colors",
         "color": "red",
         "location": "us-east"
-       }
-      for Event detail
+     }
+   ```
 
-Sample of email recieved after sending test:
+Sample of Email Received After Sending Test:
 
 ```
 {
