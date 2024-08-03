@@ -93,7 +93,7 @@ Advantage of this type of architecture:
 
 7. Here you will see the event details that were sent to CloudWatch Logs
 
-![1](https://github.com/user-attachments/assets/bd7e1454-506d-4cb1-b49b-e47e1c5de251)
+![1](https://github.com/user-attachments/assets/07be9960-26cd-486c-914e-b52ac494f588)
 
 **Rules Matching**
 
