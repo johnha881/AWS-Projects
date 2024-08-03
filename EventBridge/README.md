@@ -110,4 +110,36 @@ We will be using Simple Notifcation Service (SNS) to recieve events from EventBr
 5. Name will be colors for this topic
 6. Display name will be Colors SNS
 
+**Add rule to route and event to SNS**
+
+Head Back to EvenBridge page and click on rule -> create rule
+image
+Under Define Rule datail page enter:
+"SendColorEventsToSNS" for the name
+"Send event to SNS" for description 
+Select "my-event-bus" for event bus
+Click next
+
+image
+
+On the "build event pattern" page scroll down to "Create method" section
+Select "Custom pattern (JSON Editor) and enter
+
+{
+  "source": ["com.aws.my-event-bus"],
+  "detail": {
+    "category": ["Colors"],
+    "color": ["red"],
+    "location": ["us-east"]
+  }
+}
+
+Click next
+
+
+
+
+
+
+
 
