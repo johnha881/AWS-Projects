@@ -77,8 +77,9 @@ Advantage of this type of architecture:
         "color": "red",
         "location": "us-east"
        }
-      for Event detail
       ```
+   - for Event detail:
+      
 ![21](https://github.com/user-attachments/assets/2a4c2959-f7ca-420c-956b-1997a3928524)
 
 
