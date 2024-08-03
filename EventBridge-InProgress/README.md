@@ -1,14 +1,14 @@
 Event driven architecture with the use of EventBridge service.
 
 Services used:
-EventBridge
-SQS
-Step Functions
-SNS
+- EventBridge
+- SQS
+- Step Functions
+- SNS
 
 Advantage of this type of architecture:
 1. Producers and Consumers are decoupled. By being independent of each other, scaling would be less of an issue.
-2. Filtering and Routing to the correct target depending on the rules stated.
+2. Filtering and routing to the correct target depend on the rules specified.
 
 
 **Setup**
@@ -20,12 +20,12 @@ Advantage of this type of architecture:
 
 ![eventbuscreation](https://github.com/user-attachments/assets/07c9ff5e-4221-425a-9640-da58000e96ba)
 
-1.In "create event bus" page create a name of your choice (my-event-bus will be mine)
+4. In "create event bus" page create a name of your choice (my-event-bus will be mine).
 
 ![2nd event buss](https://github.com/user-attachments/assets/8a3b71af-e23f-4670-aae0-c78a298790f4)
 
-2. Leave the rest as default. 
-3. Select Create at bottom of page.
+5. Leave the rest as default. 
+6. Select Create at bottom of page.
 
 **Rules:**
 1. Back at the EventBridge page, select rules and create rule.
