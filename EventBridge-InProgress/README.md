@@ -103,49 +103,52 @@ Rules determine which services an event will trigger. They are processed in para
 
 We will be using Simple Notification Service (SNS) to receive events from EventBridge. 
 
-1. Navigate to SNS services on the console
-2. On the left pane of the page select topic
-3. Click on create topic button
+1. Navigate to SNS services on the console.
+2. On the left pane of the page, select "Topics."
+3. Click on the "Create topic" button.
 
 
    
-4. Choose Standard as Type
-5. Name will be colors for this topic
-6. Display name will be Colors SNS
+4. Choose "Standard" as the Type.
+5. Set the Name to "colors" for this topic.
+6. Set the Display name to "Colors SNS."
 
-Once created we will now need to provide subscription for this Topic.
-1. Go back to topic and select color under topics
-2. Click Create subscription
-
-image
-
-3. I will select Email as my subscriber.
-4. Endpoint will be my email( I will need to go to my email and confirm the subscription)
+Once created, we will now need to provide a subscription for this Topic.
+1. Go back to "Topics" and select "colors."
+2. Click "Create subscription."
 
 image
 
-
-
-5. Create subscription
-6. Go to email and subscribe to this topic
+3. For Protocol, select "Email" as the subscriber.
+4.For Endpoint, enter your email (you will need to confirm the subscription via email).
 
 image
 
-**Add rule to route and event to SNS**
 
-Head Back to EventBridge page and click on rule -> create rule
-image
-Under Define Rule datail page enter:
-"SendColorEventsToSNS" for the name
-"Send event to SNS" for description 
-Select "my-event-bus" for event bus
-Click next
+
+5. Click "Create subscription."
+6. Go to your email and confirm the subscription to this topic.
 
 image
 
-On the "build event pattern" page scroll down to "Create method" section
-Select "Custom pattern (JSON Editor) and enter
+**Add rule to route an event to SNS**
 
+1. Head back to the EventBridge page and click on "Rules" -> "Create rule."
+
+image
+
+2. Under the "Define Rule detail" page, enter:
+   - Name: "SendColorEventsToSNS"
+   - Description: "Send event to SNS" 
+   - Event bus: "my-event-bus"
+3. Click "Next."
+
+image
+
+4. On the "Build event pattern" page, scroll down to the "Create method" section:
+   - Select "Custom pattern (JSON Editor)" and enter:
+
+'''
 {
   "source": ["com.aws.my-event-bus"],
   "detail": {
@@ -154,6 +157,7 @@ Select "Custom pattern (JSON Editor) and enter
     "location": ["us-east"]
   }
 }
+'''
 
 Click next
 
