@@ -7,13 +7,13 @@ Step Functions
 SNS
 
 Advantage of this type of architecture:
-1. Producers and Consumers are decoupled. By being independant of each other, scaling would be less of an issue.
-2. Filtering and Routing to the correct target depending not the rules stated.
+1. Producers and Consumers are decoupled. By being independent of each other, scaling would be less of an issue.
+2. Filtering and Routing to the correct target depending on the rules stated.
 
 
 **Setup**
 
-**Create EventBridge**
+**EventBridge Event Bus**
 1. Navigate to EventBridge in your console.
 2. Select Event Buses under Buses.
 3. Create event bus.
@@ -45,7 +45,7 @@ Advantage of this type of architecture:
 
    ![14](https://github.com/user-attachments/assets/181cee96-454b-4fba-889d-615feaa6201e)
 
-   B. Under Even pattern enter.  
+   B. Under Event pattern, enter: 
       {
         "source": ["com.aws.my-event-bus"]
       }
@@ -55,7 +55,7 @@ Advantage of this type of architecture:
    C. Under Select targets page:
       - Select AWS Service as Target type.
       - Select CloudWatch Log Group under Select a target.
-      - Enter "my-event-bus" as Log Group(/aws/events/my-event-bus).
+      - Enter "my-event-bus" as Log Group (/aws/events/my-event-bus).
       - Click Next until you are able to review and create rule.
 
 ![15](https://github.com/user-attachments/assets/54b43805-5205-4bca-b70e-d7fd23f6e5af)
@@ -101,7 +101,7 @@ Rules determine which services an event will trigger. They are processed in para
 
 **SNS Creation**
 
-We will be using Simple Notifcation Service (SNS) to recieve events from EventBridge. 
+We will be using Simple Notification Service (SNS) to receive events from EventBridge. 
 
 1. Navigate to SNS services on the console
 2. On the left pane of the page select topic
@@ -130,7 +130,7 @@ image
 
 **Add rule to route and event to SNS**
 
-Head Back to EvenBridge page and click on rule -> create rule
+Head Back to EventBridge page and click on rule -> create rule
 image
 Under Define Rule datail page enter:
 "SendColorEventsToSNS" for the name
@@ -163,7 +163,7 @@ Click next until you are able to click on create rule
 **Test SNS**
 
 Go back to Eventbridge to test the new rule
-repeat these steps again.
+Repeat these steps:
 
 Select/Fill in the these values:
    - my-event-bus for Event Bus
