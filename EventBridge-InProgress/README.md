@@ -148,7 +148,7 @@ image
 4. On the "Build event pattern" page, scroll down to the "Create method" section:
    - Select "Custom pattern (JSON Editor)" and enter:
 
-'''
+```
 {
   "source": ["com.aws.my-event-bus"],
   "detail": {
@@ -157,7 +157,7 @@ image
     "location": ["us-east"]
   }
 }
-'''
+```
 
 Click next
 
