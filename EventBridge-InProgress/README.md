@@ -123,33 +123,32 @@ Once created, we will now need to provide a subscription for this Topic.
 1. Go back to "Topics" and select "colors."
 2. Click "Create subscription."
 
-image
+![10](https://github.com/user-attachments/assets/124e6399-e05a-48fb-bba9-cbdf7b0439ba)
 
 3. For Protocol, select "Email" as the subscriber.
 4.For Endpoint, enter your email (you will need to confirm the subscription via email).
 
-image
-
-
+![11](https://github.com/user-attachments/assets/1e44b2a2-6914-42d9-848f-2833da3fa9de)
 
 5. Click "Create subscription."
 6. Go to your email and confirm the subscription to this topic.
 
-image
+![12](https://github.com/user-attachments/assets/c982c63a-0649-467d-8e5d-4f7f9223b3e2)
 
 **Add rule to route an event to SNS**
 
 1. Head back to the EventBridge page and click on "Rules" -> "Create rule."
 
-image
+![4](https://github.com/user-attachments/assets/c4f4fe3f-75a5-4ae3-9b85-ed5c15da8f2d)
 
 2. Under the "Define Rule detail" page, enter:
-   - Name: "SendColorEventsToSNS"
+   - Name: "SendColorEventsToSN
    - Description: "Send event to SNS" 
    - Event bus: "my-event-bus"
-3. Click "Next."
+  
+![5](https://github.com/user-attachments/assets/17d88b6f-9be5-4e45-8cea-1d7dc0538843)
 
-image
+3. Click "Next."
 
 4. On the "Build event pattern" page, scroll down to the "Create method" section:
    - Select "Custom pattern (JSON Editor)" and enter:
@@ -164,6 +163,7 @@ image
   }
 }
 ```
+![6](https://github.com/user-attachments/assets/f0fd4dd7-3484-4639-a89e-290681bf8d82)
 
 5. Click "Next."
 
@@ -171,6 +171,8 @@ image
 - Select "AWS Service" for the "Target type."
 - For "Select a target," choose "SNS topic."
 - Select "colors" from the "Topic" drop-down menu.
+
+![14](https://github.com/user-attachments/assets/a9dbc48d-2c2a-437a-8827-caa8b45e2be3)
 
 7. Click "Next" until you reach the "Review and create rule" section.
 8. Click "Create rule."
@@ -210,4 +212,5 @@ Sample of Email Received After Sending Test:
   }
 }
 ```
+![13](https://github.com/user-attachments/assets/45be14db-4798-4dd8-a6d8-8529438b72c8)
 
