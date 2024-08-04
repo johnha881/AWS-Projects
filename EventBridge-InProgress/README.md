@@ -111,11 +111,13 @@ We will be using Simple Notification Service (SNS) to receive events from EventB
 2. On the left pane of the page, select "Topics."
 3. Click on the "Create topic" button.
 
+![2](https://github.com/user-attachments/assets/2ca0c8df-beff-488c-900d-97a3d36f2f86)
 
-   
 4. Choose "Standard" as the Type.
 5. Set the Name to "colors" for this topic.
 6. Set the Display name to "Colors SNS."
+
+![3](https://github.com/user-attachments/assets/9c1786b4-4af3-4fea-95a6-1a9bf8287fbf)
 
 Once created, we will now need to provide a subscription for this Topic.
 1. Go back to "Topics" and select "colors."
