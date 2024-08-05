@@ -217,4 +217,18 @@ Sample of Email Received After Sending Test:
 
 **SQS**
 
-1. 
+1. Head to Simple Queue Service(SQS) page.
+2. Select "Create queue"
+
+![15](https://github.com/user-attachments/assets/cbed1f81-3518-47bb-a2a5-8a4fd86caa4d)
+
+3. For Type choose "standard" as we do not need First-in-First-out delivery
+4. I will use "my-sqs-queue" as the name of the queue.
+5. We will leave everthing else as default.
+
+![16](https://github.com/user-attachments/assets/0fb15582-d3d8-4a55-a2bb-2d208bd4e13b)
+
+**Create rulee for SQS**
+
+
+
