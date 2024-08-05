@@ -248,7 +248,49 @@ Sample of Email Received After Sending Test:
 
 ![19](https://github.com/user-attachments/assets/8c78a0e6-1d9b-46d2-bb66-3927dda55a09)
 
-5. Leave everything as default and select "Create rule".
+5. Leave everything else as default and select "Create rule".
+
+**Test SQS"
+
+1. Return to EventBridge to test the new rule.
+2. Repeat these steps:
+   - Event Bus: "my-event-bus"
+   - Event source: "com.aws.my-event-bus"
+   - Detail type: "Notification"
+   - Note the change of  color from red to blue
+   - Event detail:
+     
+   ```
+     {
+        "category": "Colors",
+        "color": "blue",
+        "location": "us-east"
+     }
+   ```
+3. Head back to SQS page and select "my-sqs-queue"
+4. Expand the "more" button and you will see that one message is available.
+ 
+![20](https://github.com/user-attachments/assets/e348ca51-21bb-4a6d-9e65-6cee0cd3dfc4)
+
+5. To see the actual message, we will need to poll the queue:
+   - Click on: Send and receive messsages
+   
+   ![21](https://github.com/user-attachments/assets/609b1c49-5852-4fc9-aedb-242fdc0c1623)
+
+   - Click on: Poll for messages for the "Receive messages" section
+    
+  ![22](https://github.com/user-attachments/assets/a437e256-7c03-49b9-aadd-8eff82ed2616)
+
+6. Under "Messages" you will a new message appear; select the item.
+
+![23](https://github.com/user-attachments/assets/e84fc0b4-0815-4ec8-8745-bb914a00b54c)
+
+7. Take not of the "color" "blue" that is shown in the message details. If we sent a message that kept the color "red", SQS would not have received this event.
+
+![24](https://github.com/user-attachments/assets/9c429818-92d7-407a-9d12-d5866a56533d)
+
+
+     
 
 
 
