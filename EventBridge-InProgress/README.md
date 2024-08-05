@@ -34,9 +34,9 @@ Advantage of this type of architecture:
 ![13](https://github.com/user-attachments/assets/6f31e41b-74b7-40f8-9202-7d94e00ae509)
 
 3. At the Define rule detail page:
-   - Name the rule ( Mine will be rule-for-testing).
-   - Description: Testing by catching all events.
-   - Rule type: Rule with an event pattern .
+   - Name the rule ( Mine will be rule-for-testing)
+   - Description: Testing by catching all events
+   - Rule type: Rule with an event pattern 
 
 ![4](https://github.com/user-attachments/assets/9fe4eb65-fb8f-4222-aa13-94477ded2cd1)
 
@@ -222,13 +222,33 @@ Sample of Email Received After Sending Test:
 
 ![15](https://github.com/user-attachments/assets/cbed1f81-3518-47bb-a2a5-8a4fd86caa4d)
 
-3. For Type choose "standard" as we do not need First-in-First-out delivery
+3. For Type choose "standard" as we do not need First-in-First-out delivery.
 4. I will use "my-sqs-queue" as the name of the queue.
 5. We will leave everthing else as default.
 
 ![16](https://github.com/user-attachments/assets/0fb15582-d3d8-4a55-a2bb-2d208bd4e13b)
 
-**Create rulee for SQS**
+**Create rule for SQS**
+
+1. Return to EventBridge and create another rule for "my-event-bus".
+2. Rule details:
+   - Name: event-to-sqs-rule
+   - Description: Rule to send events to SQS
+   - Event bus: my-event-bus
+   - Rule type: Rule with an event pattern
+3. On the "Build event pattern" page, repeat the steps with on minor change:
+   - The "color" value will be "blue" instead of "red"
+
+![18](https://github.com/user-attachments/assets/d67e2cc6-3a3e-43b6-bbb1-92bc1c4de221)
+
+4. On the "Select Targets" page, enter the following:
+   - Target types: AWS service
+   - Select a target: SQS queue
+   - Queue: my-sqs-queue
+
+![19](https://github.com/user-attachments/assets/8c78a0e6-1d9b-46d2-bb66-3927dda55a09)
+
+5. Leave everything as default and select "Create rule".
 
 
 
