@@ -179,7 +179,7 @@ Once created, we will now need to provide a subscription for this Topic.
 
 **Test SNS**
 
-1. Go back to EventBridge to test the new rule.
+1. Return to EventBridge to test the new rule.
 2. Repeat these steps:
    - Event Bus: "my-event-bus"
    - Event source: "com.aws.my-event-bus"
@@ -214,3 +214,7 @@ Sample of Email Received After Sending Test:
 ```
 ![13](https://github.com/user-attachments/assets/45be14db-4798-4dd8-a6d8-8529438b72c8)
 
+
+**SQS**
+
+1. 
