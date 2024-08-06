@@ -267,7 +267,7 @@ Sample of Email Received After Sending Test:
         "location": "us-east"
      }
    ```
-3. Head back to SQS page and select "my-sqs-queue"
+3. Head back to SQS page and select "my-sqs-queue".
 4. Expand the "more" button and you will see that one message is available.
  
 ![20](https://github.com/user-attachments/assets/e348ca51-21bb-4a6d-9e65-6cee0cd3dfc4)
@@ -290,7 +290,61 @@ Sample of Email Received After Sending Test:
 ![24](https://github.com/user-attachments/assets/9c429818-92d7-407a-9d12-d5866a56533d)
 
 
-     
+**Step Functions**
+
+**Create Step function**
+
+1. Head over to "Step Functions" page.
+2. Select "State machines"and click on "Create state machine".
+
+![1 step](https://github.com/user-attachments/assets/3e61cb7e-f626-4b8d-9283-45898553321c)
+
+3. When choosing a template, select "Blank"
+
+![2](https://github.com/user-attachments/assets/7400880e-7bef-485a-8d84-f41fff308058)
+
+4. The "Design" page will be displayed. We will use a simple "Pass" execution to make sure the step function works.
+
+![3](https://github.com/user-attachments/assets/b0d425a9-1f6f-495a-beba-8f617edc68a6)
+
+5. Click on "Flow" and drag the selection on to the "dragon first state here" template
+
+![4](https://github.com/user-attachments/assets/4bb9dad6-5df0-4607-a3db-b8c8525faa6d)
+
+6. Click on "Code" tab, which will bring you to the JSON format of what has been done.
+
+![5](https://github.com/user-attachments/assets/8a603a5a-22a1-4aab-962d-eb41099a8deb)
+
+7. Next, Click on Config and do the following:
+   - State machine name: "ProcessEventStepFunction"
+   - Type: "Standard"
+   - Permissions: Execution role: "Create New Role"
+
+![6](https://github.com/user-attachments/assets/75a17955-4b1c-4791-a315-c46295182734)
+
+8. Click "Create" at the top right.
+9. A pop-up to confirm the creation will appear. Note the role that will be created. Click "Confirm"
+
+![7](https://github.com/user-attachments/assets/74e9bb60-aae5-4fcb-b8c4-136ca471ee93)
+
+**Test Step Function**
+
+1. After creating the Step function, you will be taken to its page named "ProcessEventStepFunction".
+2. Click "Start execution"
+
+![8](https://github.com/user-attachments/assets/d5c4ddc7-8c34-46cd-9e03-c24da95b45a7)
+
+3. A pop-up will appear:
+   - Name: Leave as default
+   - input:  {
+           "msg": ["Hello World!"]
+             }
+
+   
+
+
+
+
 
 
 
