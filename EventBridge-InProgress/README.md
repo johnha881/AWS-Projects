@@ -350,8 +350,10 @@ Sample of Email Received After Sending Test:
 
 **Sending Event from EvenBridge to Step Functions**
 
+1. Back at the EventBridge page, select rules and create rule.
+2. Select "my-event-bridge" as the bus name the rule will apply to.
 
-
+![13](https://github.com/user-attachments/assets/6f31e41b-74b7-40f8-9202-7d94e00ae509)
 
 
 
