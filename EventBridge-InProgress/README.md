@@ -398,7 +398,7 @@ Sample of Email Received After Sending Test:
    ```
      {
         "category": "Colors",
-        "color": "blue",
+        "color": "green",
         "location": "us-east"
      }
    ```
