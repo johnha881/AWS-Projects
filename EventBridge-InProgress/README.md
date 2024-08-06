@@ -366,15 +366,54 @@ Sample of Email Received After Sending Test:
    - Event Pattern:
 ```
 {
-     "source": ["com.aws.my-event-bus"],
-     "detail": {
-    "category": ["Colors"],
-    "color": ["green"],
-    "location": ["us-east"]
+   "source": ["com.aws.my-event-bus"],
+   "detail": {
+      "category": ["Colors"],
+       "color": ["green"],
+       "location": ["us-east"]
   }
 }
 ```
+   - Next
 
+6. Select target:
+   - Target type: "AWS service"
+   - Select a target: "Step Functions state machine"
+   - State machine: "ProcessEventStepFunction"
+   - Execution role: "Create a new role for this specific resource"
+   - Role name: "Amazon_EventBridge_Invoke_Step_Functions_824957223" (randomly created when create new role)
+
+![14](https://github.com/user-attachments/assets/35f9164b-fc52-4982-b078-b2e3bfff53df)
+
+7. Click next until you can "Create rule".
+
+8. Return to EventBridge to test the new rule.
+9. Repeat these steps:
+   - Event Bus: "my-event-bus"
+   - Event source: "com.aws.my-event-bus"
+   - Detail type: "colors"
+   - Note the change of color: "green"
+   - Event detail:
+   - Send
+   ```
+     {
+        "category": "Colors",
+        "color": "blue",
+        "location": "us-east"
+     }
+   ```
+
+![15](https://github.com/user-attachments/assets/a7518a5f-2626-4a8e-9d52-0df1d5fee083)
+
+10. Return to Step Functions page; find and select "ProcessEventStepFunction" function
+11. If event was successfully sent to Step function, you will see the new entry for execution
+
+![16](https://github.com/user-attachments/assets/ac8bb5f9-d4b9-468b-a249-ab031c193bea)
+
+12. Select that execution and scroll down to "Event view"
+13. Expand where it says "ExecutionSucceded" and you will see your Event information that was passed from EventBridge.
+
+![17](https://github.com/user-attachments/assets/339f339c-323f-4aae-b9e4-976576bc4d8e)
 
 
 
