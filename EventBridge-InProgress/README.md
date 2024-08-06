@@ -340,7 +340,17 @@ Sample of Email Received After Sending Test:
            "msg": ["Hello World!"]
              }
 
-   
+![9](https://github.com/user-attachments/assets/ed2ac619-417a-4519-8bb7-ce8d10f8252d)
+
+4. Click on "Start execution"
+
+5. If successful, you will see this output:
+
+![11](https://github.com/user-attachments/assets/610d007a-b5b4-44fe-ac8e-04bf6b9f134d)
+
+**Sending Event from EvenBridge to Step Functions**
+
+
 
 
 
