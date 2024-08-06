@@ -352,9 +352,28 @@ Sample of Email Received After Sending Test:
 
 1. Back at the EventBridge page, select rules and create rule.
 2. Select "my-event-bridge" as the bus name the rule will apply to.
+3. Create Rule.
 
-![13](https://github.com/user-attachments/assets/6f31e41b-74b7-40f8-9202-7d94e00ae509)
+4. Define rule detail:
+   - Name: "event-to-stepFunction-rule"
+   - Description: "Event sent to step function"
+   - Event bus: "my-event-bus"
+   - Rule type: "Rule with an event pattern"
+   - Create
 
+5. Build event pattern:
+   - Event source: "Other"
+   - Event Pattern:
+```
+{
+     "source": ["com.aws.my-event-bus"],
+     "detail": {
+    "category": ["Colors"],
+    "color": ["green"],
+    "location": ["us-east"]
+  }
+}
+```
 
 
 
