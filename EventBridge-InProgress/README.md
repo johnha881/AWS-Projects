@@ -1,4 +1,4 @@
-# Event driven architecture with the use of EventBridge service pushing events out to SQS,SNS and Step Functions.
+# Event driven architecture with the use of EventBridge service pushing events out to SQS, SNS and Step Functions.
 
 ## Table of Contents
    - [Introduction](#introduction)
