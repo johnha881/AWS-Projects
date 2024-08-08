@@ -431,12 +431,22 @@ Sample of Email Received After Sending Test:
 
 ### SNS
 
-   - SNS is highly available through regions and Availability Zones(AZ)
+   - SNS is highly available through regions and Availability Zones(AZ).
    - 99.9% availability throught multiple servers and data centers.
    - 2 weeks retention peroid for undelivered messages.
    - Cross-region subscription is available for pseudo-replication."
 
 ## Cost Optimization 
+
+### SNS
+
+   - Standard VS FIFO(First in, First out)
+     - Standard is used for non-critical, cheapter and where messages can arrive twice or more.
+     - Fifo is for order-critical, one messsage only delivery. Cost more than standard.
+     - Be aware of message size.
+     - SMS/Email subscribers are more expensive than lambda/http
+
+## Security 
 
 ### SNS
 
