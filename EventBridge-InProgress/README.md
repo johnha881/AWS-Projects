@@ -2,6 +2,7 @@
 
 ## Table of Contents
    - [Introduction](#introduction)
+   - [Setup](#setup)
 
 ## Introduction
 This project showcases how to use AWS EventBridge as an event bus to manage and route events, with Amazon SQS, AWS Step Functions, and Amazon SNS serving as consumers. It demonstrates the setup of EventBridge rules to capture and filter events, which are then forwarded to SQS for queuing, processed through Step Functions for workflow orchestration, and published to SNS for notifications. The project also discusses considerations for scaling, availability, cost optimization, and security across these services.
@@ -11,7 +12,7 @@ Advantage of this type of architecture:
 2. Filtering and routing to the correct target depend on the rules specified.
 
 
-**Setup**
+## Setup
 
 **EventBridge Event Bus**
 1. Navigate to EventBridge in your console.
