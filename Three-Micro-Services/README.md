@@ -12,7 +12,7 @@
 - [Availability](#availability)
 - [Cost Optimization](#cost-optimization)
 - [Security](#security)
-- [Issues I ran into](#Issues)
+- [Issues I ran into](#issues)
 
 ## Introduction
 This project demonstrates how to build a serverless application using AWS API Gateway, AWS Lambda, and Amazon DynamoDB. It covers the steps to set up IAM roles, Lambda functions, DynamoDB tables, and API Gateway, along with considerations for scaling, availability, cost optimization, and security.
@@ -140,7 +140,7 @@ Check if the API injection works by using POST commands to interact with the Dyn
 - **Auditing**: Use CloudWatch for monitoring and logging.
 - **AWS X-Ray**: Trace and analyze application performance.
 
-## Issues
+### Issues
 - **AWSLambda_FullAccess**: Used initially but needed roles for more secure access.
 - **x-api-key**: Took some time to find this value. This is the default AWS key name to access API Gateway.
 - **Eventual Consistency**: The first GetItem call returned null, which was unexpected. However, the second call, made after waiting a few     seconds, returned the expected result.
