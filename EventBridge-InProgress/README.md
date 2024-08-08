@@ -420,6 +420,28 @@ Sample of Email Received After Sending Test:
 
 ![17](https://github.com/user-attachments/assets/339f339c-323f-4aae-b9e4-976576bc4d8e)
 
+## Scaling
+
+### SNS
+
+   - SNS has inherent scaling. It will automatically scale for you.
+   - SNS will also scale with the amount of subscribers for the topic.
+
+## Availability
+
+### SNS
+
+   - SNS is highly available through regions and Availability Zones(AZ)
+   - 99.9% availability throught multiple servers and data centers.
+   - 2 weeks retention peroid for undelivered messages.
+   - Cross-region subscription is available for pseudo-replication."
+
+## Cost Optimization 
+
+### SNS
+
+   -
+
 
 
 
