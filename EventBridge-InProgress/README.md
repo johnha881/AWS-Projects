@@ -4,6 +4,9 @@
    - [Introduction](#introduction)
    - [Setup](#setup)
       - [EventBridge Event Bus](#eventbridge-event-bus)
+      - [SNS Creation](#sns-creation)
+      - [SQS](#sqs)
+      - [Step Functions](#step-functions)
 
 ## Introduction
 This project showcases how to use AWS EventBridge as an event bus to manage and route events, with Amazon SQS, AWS Step Functions, and Amazon SNS serving as consumers. It demonstrates the setup of EventBridge rules to capture and filter events, which are then forwarded to SQS for queuing, processed through Step Functions for workflow orchestration, and published to SNS for notifications. The project also discusses considerations for scaling, availability, cost optimization, and security across these services.
@@ -105,7 +108,7 @@ Advantage of this type of architecture:
 
 Rules determine which services an event will trigger. They are processed in parallel, without a specific order. JSON format will be used by EventBridge for rules to match event patterns. Patterns need to be precise(Uppercase/Lowercase/decimal/etc matter).
 
-**SNS Creation**
+## SNS Creation
 
 We will be using Simple Notification Service (SNS) to receive events from EventBridge. 
 
@@ -217,7 +220,7 @@ Sample of Email Received After Sending Test:
 ![13](https://github.com/user-attachments/assets/45be14db-4798-4dd8-a6d8-8529438b72c8)
 
 
-**SQS**
+## SQS
 
 1. Head to Simple Queue Service(SQS) page.
 2. Select "Create queue"
@@ -292,7 +295,7 @@ Sample of Email Received After Sending Test:
 ![24](https://github.com/user-attachments/assets/9c429818-92d7-407a-9d12-d5866a56533d)
 
 
-**Step Functions**
+## Step Functions
 
 **Create Step function**
 
