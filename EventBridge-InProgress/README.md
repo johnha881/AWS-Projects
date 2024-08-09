@@ -439,6 +439,9 @@ Sample of Email Received After Sending Test:
 
 ### Step Functions
 
+   - Scales automatically by adjusting operations and compute resources.
+   - Map state processing to run multiple step functions in parallel
+
 ## Availability
 
 ### EventBridge
@@ -460,6 +463,8 @@ Sample of Email Received After Sending Test:
    - 99.9% availability through multiple servers and data centers.
 
 ### Step Functions
+
+   - Highly available through multiple AZ deployments.
 
 ## Cost Optimization
 
@@ -489,7 +494,12 @@ Use Cloudwatch Alarms to be alerted to unwanted actions which would increase cos
 
 ### Step Functions
 
+   - Pay-per-use
+   - 4,000 state transitions per month free, $0.025 per 1,000 state transitions after.
+
 ## Security 
+
+All services can use VPC endpoints to limit access from outside environments.
 
 ### EventBridge
 
@@ -511,4 +521,6 @@ Use Cloudwatch Alarms to be alerted to unwanted actions which would increase cos
    - SSL encryption of messages on flight.
 
 ### Step Functions
+
+   - IAM User, Roles and policies for access from service to service. 
 
