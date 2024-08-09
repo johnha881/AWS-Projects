@@ -422,12 +422,23 @@ Sample of Email Received After Sending Test:
 
 ## Scaling
 
+### EventBridge
+
+   - Scales automatically (there is a softcap on quotas)
+   - Make sure consumers are able to handle the amount of events being sent.
+   
 ### SNS
 
    - SNS has inherent scaling. It will automatically scale for you.
    - SNS will also scale with the amount of subscribers for the topic.
 
 ## Availability
+
+### EventBridge
+
+   - Highly available through multiple AZ deployments.
+   - Option to enble cross-region event routing.
+   - guaranteed 99.99% availability for event delivery
 
 ### SNS
 
@@ -436,17 +447,32 @@ Sample of Email Received After Sending Test:
    - 2 weeks retention peroid for undelivered messages.
    - Cross-region subscription is available for pseudo-replication."
 
-## Cost Optimization 
+## Cost Optimization
+
+Use Cloudwatch Alarms to be alerted to unwanted actions which would increase cost.
+
+### EventBridge
+
+   - Be aware of payload size.
+   - Proper event patterns to filtering.
+   - Limit number of event buses.
 
 ### SNS
 
    - Standard VS FIFO(First in, First out)
      - Standard is used for non-critical, cheapter and where messages can arrive twice or more.
      - Fifo is for order-critical, one messsage only delivery. Cost more than standard.
-     - Be aware of message size.
-     - SMS/Email subscribers are more expensive than lambda/http.
+   - Be aware of payload size.
+   - SMS/Email subscribers are more expensive than lambda/http.
 
 ## Security 
+
+### EventBridge
+
+   - IAM policies for access.
+   - Least privilege to send and receieve events.
+   - Cloudwatch log to see user activity.
+   - AWS encryption at rest and in transit.
 
 ### SNS
 
