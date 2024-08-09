@@ -508,7 +508,7 @@ All services can use VPC endpoints to limit access from outside environments.
 ### EventBridge
 
    - IAM policies for access.
-   - Least privilege to send and receieve events.
+   - Least privilege to send and receive events.
    - Cloudwatch log to see user activity.
    - AWS encryption at rest and in transit.
 
@@ -520,7 +520,7 @@ All services can use VPC endpoints to limit access from outside environments.
 
 ### SQS
 
-   - Least privilege to send and receieve events.
+   - Least privilege to send and receive events.
    - IAM User, Roles and policies for access.
    - SSL encryption of messages on flight.
 
