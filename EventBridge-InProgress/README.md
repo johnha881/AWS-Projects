@@ -444,13 +444,15 @@ Sample of Email Received After Sending Test:
      - Standard is used for non-critical, cheapter and where messages can arrive twice or more.
      - Fifo is for order-critical, one messsage only delivery. Cost more than standard.
      - Be aware of message size.
-     - SMS/Email subscribers are more expensive than lambda/http
+     - SMS/Email subscribers are more expensive than lambda/http.
 
 ## Security 
 
 ### SNS
 
-   -
+   - Topic policies to limit who can publish and subscribe.
+   - Serverside encryption on topics.
+   - IAM policies for access.
 
 
 
