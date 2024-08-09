@@ -424,7 +424,7 @@ Sample of Email Received After Sending Test:
 
 ### EventBridge
 
-   - Scales automatically (there is a softcap on quotas)
+   - Scales automatically (there is a softcap on quotas).
    - Make sure consumers are able to handle the amount of events being sent.
    
 ### SNS
@@ -434,24 +434,32 @@ Sample of Email Received After Sending Test:
 
 ### SQS
 
+   - SQS has inherent scaling. It will automatically scale for you.
+   - Horizonal scaling with auto-scaling groups(EC2) and ECS to poll larger loads. (Visiability time out to avoid same messaging being processed moultiple times).
+
+### Step Functions
+
 ## Availability
 
 ### EventBridge
 
    - Highly available through multiple AZ deployments.
    - Option to enble cross-region event routing.
-   - guaranteed 99.99% availability for event delivery
+   - Guaranteed 99.99% availability for event delivery
 
 ### SNS
 
    - SNS is highly available through regions and Availability Zones(AZ).
-   - 99.9% availability throught multiple servers and data centers.
+   - 99.9% availability through multiple servers and data centers.
    - 2 weeks retention peroid for undelivered messages.
    - Cross-region subscription is available for pseudo-replication."
 
 ### SQS
 
+   - SQS is highly available through regions and Availability Zones(AZ).
+   - 99.9% availability through multiple servers and data centers.
 
+### Step Functions
 
 ## Cost Optimization
 
@@ -465,13 +473,21 @@ Use Cloudwatch Alarms to be alerted to unwanted actions which would increase cos
 
 ### SNS
 
-   - Standard VS FIFO(First in, First out)
+   - Standard VS FIFO(First in, First out).
      - Standard is used for non-critical, cheapter and where messages can arrive twice or more.
      - Fifo is for order-critical, one messsage only delivery. Cost more than standard.
    - Be aware of payload size.
    - SMS/Email subscribers are more expensive than lambda/http.
 
 ### SQS
+
+   - Track duplication of messages.
+   - Pay-as-you-go pricing for no upfront cost.
+   - Short polling vs long polling (less amount of pull request)
+   - Message size, smaller the better
+   - Use visibility time out appropriately to avoid messages being processed more than once.
+
+### Step Functions
 
 ## Security 
 
@@ -486,10 +502,13 @@ Use Cloudwatch Alarms to be alerted to unwanted actions which would increase cos
 
    - Topic policies to limit who can publish and subscribe.
    - Serverside encryption on topics.
-   - IAM policies for access.
+   - IAM User, Roles and policies for access.
 
 ### SQS
 
+   - Least privilege to send and receieve events.
+   - IAM User, Roles and policies for access.
+   - SSL encryption of messages on flight.
 
-
+### Step Functions
 
