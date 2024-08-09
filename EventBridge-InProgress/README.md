@@ -432,6 +432,8 @@ Sample of Email Received After Sending Test:
    - SNS has inherent scaling. It will automatically scale for you.
    - SNS will also scale with the amount of subscribers for the topic.
 
+### SQS
+
 ## Availability
 
 ### EventBridge
@@ -446,6 +448,10 @@ Sample of Email Received After Sending Test:
    - 99.9% availability throught multiple servers and data centers.
    - 2 weeks retention peroid for undelivered messages.
    - Cross-region subscription is available for pseudo-replication."
+
+### SQS
+
+
 
 ## Cost Optimization
 
@@ -465,6 +471,8 @@ Use Cloudwatch Alarms to be alerted to unwanted actions which would increase cos
    - Be aware of payload size.
    - SMS/Email subscribers are more expensive than lambda/http.
 
+### SQS
+
 ## Security 
 
 ### EventBridge
@@ -479,6 +487,8 @@ Use Cloudwatch Alarms to be alerted to unwanted actions which would increase cos
    - Topic policies to limit who can publish and subscribe.
    - Serverside encryption on topics.
    - IAM policies for access.
+
+### SQS
 
 
 
