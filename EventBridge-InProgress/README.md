@@ -1,4 +1,4 @@
-# Event driven architecture with the use of EventBridge service pushing events out to SQS, SNS and Step Functions.
+# Event-driven architecture with the use of EventBridge service pushing events out to SQS, SNS and Step Functions.
 
 ## Table of Contents
    - [Introduction](#introduction)
@@ -37,13 +37,13 @@ Advantage of this type of architecture:
 6. Select Create at bottom of page.
 
 **Rules:**
-1. Back at the EventBridge page, select rules and create rule.
+1. Return to the EventBridge page, select rules and create rule.
 2. Select "my-event-bridge" as the bus name the rule will apply to.
 
 ![13](https://github.com/user-attachments/assets/6f31e41b-74b7-40f8-9202-7d94e00ae509)
 
 3. At the Define rule detail page:
-   - Name the rule ( Mine will be rule-for-testing)
+   - Name the rule ( Mine will be "rule-for-testing")
    - Description: Testing by catching all events
    - Rule type: Rule with an event pattern 
 
@@ -110,7 +110,7 @@ Advantage of this type of architecture:
 
 **Rules Matching**
 
-Rules determine which services an event will trigger. They are processed in parallel, without a specific order. JSON format will be used by EventBridge for rules to match event patterns. Patterns need to be precise(Uppercase/Lowercase/decimal/etc matter).
+Rules determine which services an event will trigger. They are processed in parallel, without a specific order. JSON format is used by EventBridge for rules to match event patterns. Patterns need to be precise (uppercase/lowercase/decimal, etc. matter).
 
 ## SNS Creation
 
@@ -266,7 +266,7 @@ Sample of Email Received After Sending Test:
    - Event Bus: "my-event-bus"
    - Event source: "com.aws.my-event-bus"
    - Detail type: "Notification"
-   - Note the change of  color from red to blue
+   - Note the change in color from red to blue
    - Event detail:
      
    ```
@@ -282,7 +282,7 @@ Sample of Email Received After Sending Test:
 ![20](https://github.com/user-attachments/assets/e348ca51-21bb-4a6d-9e65-6cee0cd3dfc4)
 
 5. To see the actual message, we will need to poll the queue:
-   - Click on: Send and receive messsages
+   - Click on: Send and receive messages
    
    ![21](https://github.com/user-attachments/assets/609b1c49-5852-4fc9-aedb-242fdc0c1623)
 
@@ -294,7 +294,7 @@ Sample of Email Received After Sending Test:
 
 ![23](https://github.com/user-attachments/assets/e84fc0b4-0815-4ec8-8745-bb914a00b54c)
 
-7. Take not of the "color" "blue" that is shown in the message details. If we sent a message that kept the color "red", SQS would not have received this event.
+7. Take note of the 'color: blue' that is shown in the message details. If we sent a message that kept the color "red", SQS would not have received this event.
 
 ![24](https://github.com/user-attachments/assets/9c429818-92d7-407a-9d12-d5866a56533d)
 
@@ -303,8 +303,8 @@ Sample of Email Received After Sending Test:
 
 **Create Step function**
 
-1. Head over to "Step Functions" page.
-2. Select "State machines"and click on "Create state machine".
+1. Head over to the "Step Functions" page.
+2. Select "State machines" and click on "Create state machine".
 
 ![1 step](https://github.com/user-attachments/assets/3e61cb7e-f626-4b8d-9283-45898553321c)
 
@@ -332,7 +332,7 @@ Sample of Email Received After Sending Test:
 ![6](https://github.com/user-attachments/assets/75a17955-4b1c-4791-a315-c46295182734)
 
 8. Click "Create" at the top right.
-9. A pop-up to confirm the creation will appear. Note the role that will be created. Click "Confirm"
+9. A pop-up to confirm the creation will appear. Note the role that will be created. Click "Confirm".
 
 ![7](https://github.com/user-attachments/assets/74e9bb60-aae5-4fcb-b8c4-136ca471ee93)
 
