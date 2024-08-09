@@ -439,7 +439,7 @@ Sample of Email Received After Sending Test:
 ### SQS
 
    - SQS has inherent scaling. It will automatically scale for you.
-   - Horizonal scaling with auto-scaling groups(EC2) and ECS to poll larger loads. (Visiability time out to avoid same messaging being processed moultiple times).
+   - Horizontal scaling with auto-scaling groups(EC2) and ECS to poll larger loads. (Visibility time out to avoid same messaging being processed multiple times).
 
 ### Step Functions
 
@@ -451,14 +451,14 @@ Sample of Email Received After Sending Test:
 ### EventBridge
 
    - Highly available through multiple AZ deployments.
-   - Option to enble cross-region event routing.
+   - Option to enable cross-region event routing.
    - Guaranteed 99.99% availability for event delivery
 
 ### SNS
 
    - SNS is highly available through regions and Availability Zones(AZ).
    - 99.9% availability through multiple servers and data centers.
-   - 2 weeks retention peroid for undelivered messages.
+   - 2 weeks retention period for undelivered messages.
    - Cross-region subscription is available for pseudo-replication."
 
 ### SQS
@@ -472,7 +472,7 @@ Sample of Email Received After Sending Test:
 
 ## Cost Optimization
 
-Use Cloudwatch Alarms to be alerted to unwanted actions which would increase cost.
+Use CloudWatch Alarms to be alerted to unwanted actions which would increase cost.
 
 ### EventBridge
 
@@ -483,10 +483,10 @@ Use Cloudwatch Alarms to be alerted to unwanted actions which would increase cos
 ### SNS
 
    - Standard VS FIFO(First in, First out).
-     - Standard is used for non-critical, cheapter and where messages can arrive twice or more.
-     - Fifo is for order-critical, one messsage only delivery. Cost more than standard.
+     - Standard is used for non-critical scenarios where cost is lower and messages might arrive more than once.
+     - FIFO is for order-critical, one message only delivery. Cost more than standard.
    - Be aware of payload size.
-   - SMS/Email subscribers are more expensive than lambda/http.
+   - SMS/email subscribers are more expensive than lambda/http.
 
 ### SQS
 
@@ -509,22 +509,22 @@ All services can use VPC endpoints to limit access from outside environments.
 
    - IAM policies for access.
    - Least privilege to send and receive events.
-   - Cloudwatch log to see user activity.
+   - CloudWatch log to see user activity.
    - AWS encryption at rest and in transit.
 
 ### SNS
 
    - Topic policies to limit who can publish and subscribe.
-   - Serverside encryption on topics.
-   - IAM User, Roles and policies for access.
+   - Server-side encryption on topics.
+   - IAM users, roles, and policies for access.
 
 ### SQS
 
    - Least privilege to send and receive events.
-   - IAM User, Roles and policies for access.
-   - SSL encryption of messages on flight.
+   - IAM users, roles, and policies for access.
+   - SSL encryption of messages in transit.
 
 ### Step Functions
 
-   - IAM User, Roles and policies for access from service to service. 
+   - IAM users, roles, and policies for access. 
 
