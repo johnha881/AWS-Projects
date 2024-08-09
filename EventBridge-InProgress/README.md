@@ -7,6 +7,10 @@
       - [SNS Creation](#sns-creation)
       - [SQS](#sqs)
       - [Step Functions](#step-functions)
+   - [Scaling](#scaling)
+   - [Availability](#availability)
+   - [Cost Optimization](#cost-optimization)
+   - [Security](#security)
 
 ## Introduction
 This project showcases how to use AWS EventBridge as an event bus to manage and route events, with Amazon SQS, AWS Step Functions, and Amazon SNS serving as consumers. It demonstrates the setup of EventBridge rules to capture and filter events, which are then forwarded to SQS for queuing, processed through Step Functions for workflow orchestration, and published to SNS for notifications. The project also discusses considerations for scaling, availability, cost optimization, and security across these services.
