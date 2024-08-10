@@ -530,4 +530,6 @@ All services can use VPC endpoints to limit access from outside environments.
 
 ## Issues I ran into
 
-   -
+   - Event being sent needs to match an "event pattern" in order to be forwarded to its destination.
+      - Use an Array ("[]") to avoid any matching issues.
+   - AWS Resource Explorer is a great way to locate resources that were created by you and by AWS on your behalf.
